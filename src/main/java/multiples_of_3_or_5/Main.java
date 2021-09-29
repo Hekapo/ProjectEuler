@@ -1,4 +1,4 @@
-package multiplesFf3or5;
+package multiples_of_3_or_5;
 
 import java.util.stream.IntStream;
 
