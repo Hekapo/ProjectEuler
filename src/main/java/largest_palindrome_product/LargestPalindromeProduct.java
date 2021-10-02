@@ -8,11 +8,13 @@ package largest_palindrome_product;
 public class LargestPalindromeProduct {
     public static void main(String[] args) {
         int max = 0;
+        final long startTime = System.currentTimeMillis();
+
         for (int i = 100; i < 1000; i++) {
-            for (int j = 100; j < 1000; j++) {
+            for (int j = i + 1; j < 1000; j++) {
                 int ml = i * j;
 
-                if (isPalindrome(ml) && ml > 10000) {
+                if (isPalindrome(ml)) {
                     if (max < ml) {
                         max = ml;
 
@@ -23,6 +25,9 @@ public class LargestPalindromeProduct {
             }
 
         }
+        final long endTime = System.currentTimeMillis();
+
+        System.out.println("Total execution time: " + (endTime - startTime));
         System.out.println(max);
 
     }
